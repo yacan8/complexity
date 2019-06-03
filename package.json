@@ -1,6 +1,6 @@
 {
   "name": "javascript-complexity",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "圈复杂度",
   "main": "lib/index.js",
   "bin": {
@@ -35,12 +35,12 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
-    "@babel/runtime": "^7.4.5",
     "mocha": "^6.1.4",
     "rimraf": "^2.6.3",
     "should": "^13.2.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.5",
     "espree": "^5.0.1",
     "estraverse": "^4.2.0",
     "lodash": "^4.17.11",
