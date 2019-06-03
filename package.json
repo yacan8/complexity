@@ -1,0 +1,50 @@
+{
+  "name": "javascript-complexity",
+  "version": "1.0.0",
+  "description": "圈复杂度",
+  "main": "lib/index.js",
+  "bin": {
+    "javascript-complexity": "./bin/jscomplexity.js"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "clean:test": "rimraf test-tmp",
+    "test:compile": "npm run clean:test && echo Using Babel && Babel --version && babel test --out-dir test-tmp -s",
+    "compile": "npm run clean && echo Using Babel && Babel --version && babel src --out-dir lib -s",
+    "test": "npm run compile && npm run test:compile && mocha test-tmp/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yacan8/complexity.git"
+  },
+  "keywords": [
+    "javascript",
+    "complexity"
+  ],
+  "author": "can.yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yacan8/complexity/issues"
+  },
+  "homepage": "https://github.com/yacan8/complexity#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "mocha": "^6.1.4",
+    "rimraf": "^2.6.3",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "espree": "^5.0.1",
+    "estraverse": "^4.2.0",
+    "lodash": "^4.17.11",
+    "nomnom": "^1.8.1",
+    "yatf": "^1.0.4"
+  }
+}
